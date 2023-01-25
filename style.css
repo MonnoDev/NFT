@@ -1,50 +1,89 @@
+html{
+    font-family: 'Roboto', sans-serif;
+    background-color: #FFFFFF;
+    font-size: calc(16px + 0.390625vw);
+    font-size: calc(50px + 0.390625vw );
+    font-size: calc(15px + 0.390625vw );
+    font-size: calc(17px + 0.390625vw );
+    font-size: calc(20px + 0.390625vw );
+    font-size: calc(12px + 0.390625vw );
+    font-size: calc(40px + 0.390625vw );
+    font-size: calc(25px + 0.390625vw );
+}
+
 ul{
     list-style: none;
+    margin: 0;
+    padding: 0;
 }
 
 a:link{
     text-decoration: none;
 }
 
-.navigatioBar{
-    display: flex;  
+.navigatioBar img{
+    padding-top: 0.6rem;
+    padding-left: 0.6rem;
 }
 
-.nav ul{
+.menu a{
+    color:#555555;
+    font-size: 16px;
+    padding-left: 0.6rem;
+}
+
+.nav a:hover{
+    color: #FF3998; 
+}
+
+.menu li{
+    margin-bottom: 10px;
+}
+
+.menu{
     display: flex;
+    flex-direction: column;
+    font-weight: lighter;
 }
 
-nav a{
-    color:#555555
+.firstContainer, .secondContainer{
+    display: flex;
+    padding-left: 0.6rem;
+    padding-bottom: 2rem;
+    padding-top: 1rem;
 }
 
-
-.firstContainer{
-    display: flex;  
+.firstConainerbox1{
+    position: relative;
+    width: 200px;
+    
 }
 
 .imagePink{
-    width: 190px;
-    height: 60px;
+    position: absolute;
+    transform: scale(0.7, 0.7);
+    left: 5%;
 }
 
-.imagePink img{
-    object-fit: cover;
-    width: 100%;
-}
-
-.firstConainerbox1 div:nth-child(1){
+.firstConainerbox1 div:nth-child(1), .secondConainerbox1 div:nth-child(1){
     color: #FF3998;
-    font-weight: bold;
+    font-size: 16px;
+    padding-bottom: 1.5rem;
 }
 
-.firstConainerbox1 div:nth-child(2){
+.firstConainerbox1 div:nth-child(2), .secondConainerbox1 div:nth-child(2){
     color: #111111;
     font-weight: bold;
+    font-size: 50px;
+    padding-bottom: 1.5rem;
 }
 
-.firstConainerbox1 div:nth-child(3){
+.firstConainerbox1 div:nth-child(3), .secondConainerbox1 div:nth-child(3){
     color: #555555;
+    font-size: 20px;
+    font-weight: lighter;
+    padding-bottom: 1.5rem;
+    
 }
 
 .signUp a{
@@ -53,10 +92,11 @@ nav a{
 
 .signUp{
     text-align: center;
-    line-height: 40px;
-    width: 100px;
-    height: 40px;
-    border: solid 2px transparent;
+    line-height: 60px;
+    width: 200px;
+    height: 60px;
+    font-size: 25px;
+    border: solid 4px transparent;
     border-radius: 1rem;
     background: linear-gradient(white, white) padding-box, 
         linear-gradient(to right, #ff7739, #d29d50,#d49c50, #85ce78) border-box;
@@ -64,10 +104,14 @@ nav a{
 }
 
 .relative{
+    width:100%;
+    height: 326px;
     position: relative;
-    width: 320px;
-    height: 300px;
+}
 
+.gradient{
+    background: rgb(255,57,57);
+    background: linear-gradient(90deg, rgba(255,57,57,1) 0%, rgba(255,129,57,1) 73%, rgba(199,164,86,1) 94%, rgba(149,196,112,1) 100%);
 }
 
 .relative img{
@@ -78,24 +122,30 @@ nav a{
 
 .absolute1{
     position: absolute;
-    font-weight: bold;
-    font-size: 2rem;
-    bottom: 20%;
+    font-size: 45px;
+    padding-left: 0.6rem;
+    bottom: 30%;
+    right: 12%;
 }
 
 .absolute2{
     position: absolute;
-    font-size: 1.3rem;
-    bottom: 5%;
+    font-size: 20px;
+    font-weight: lighter;
+    padding-left: 0.6rem;
+    bottom: 10%;
+    right: 16%;
 }
 
 .companyIcons{
     display: grid;
     grid-template-columns:repeat(2, 1fr);
     grid-template-rows: repeat(2, 1fr);
-    grid-gap: 10px;
-    width: 250px;
-    
+    grid-gap: 20px;
+    width: 100%;
+    padding-top: 1rem;
+    padding-bottom: 1rem;
+    padding-left: 0.6rem;
 }
 
 .blockElement{
@@ -103,17 +153,45 @@ nav a{
 }
 
 .companyIcons img{
-    width: 100%;
+    width: 140px;
     object-fit: cover;
 }
 
 .nftIcons{
     display: flex;
+    padding: 0.6rem;
+    overflow-x: scroll;
 }
 
 .iconSize{
     width: 290px;
     height: 270px;
+}
+
+
+.nftText{
+    padding-left: 0.6rem;
+    padding-right: 0.6rem;
+}
+
+.icons{
+    padding-right: 0.6rem;
+}
+
+.nftText div:nth-child(1){
+    font-size: 40px;   
+}
+
+.nftText div:nth-child(2){
+    font-size: 20px;
+    padding-top: 0.5rem;
+    font-weight: lighter;
+    color: #555555;
+}
+
+.nftText a{
+    text-decoration: underline;
+    color: #555555;
 }
 
 .greyBack{
@@ -125,45 +203,227 @@ nav a{
     justify-content: space-between;
 }
 
+.leftSidenft{
+    padding-left: 0.6rem;
+}
+
+.rightSidenft{
+   padding-right: 0.6rem;
+   text-align: right;
+}
+
+.leftSidenft div:nth-child(1){
+    color: #FF8139;
+    font-size: 12px;
+    padding-bottom: 0.3rem;
+    padding-top: 0.5rem;
+}
+
+.leftSidenft div:nth-child(2){
+    font-size: 20px;
+    padding-bottom: 0.3rem;
+}
+
+.leftSidenft div:nth-child(3){
+    font-size: 17px;
+    color: #777777;
+    font-weight: lighter;
+    padding-bottom: 0.5rem;
+}
+
+.rightSidenft div:nth-child(1){
+    color: #777777;
+    font-size: 12px;
+    padding-bottom: 0.3rem;
+    padding-top: 0.5rem;
+}
+
+.rightSidenft div:nth-child(2){
+    font-size: 20px;
+    padding-bottom: 0.3rem;
+}
+
+.rightSidenft div:nth-child(3){
+    font-size: 17px;
+    font-weight: lighter;
+    color: #777777;
+    padding-bottom: 0.5rem;
+}
+
+.imageGreen{
+    left: 65%;
+}
+
+.secondConainerbox1{
+    position: relative;
+    width: 200px;
+}
+
 .socials{
     display: flex;
+    color: #999999;
+}
+
+.footerStart{
+    padding-left: 0.6rem;
+}
+
+.socials div:nth-child(2), .socials div:nth-child(3), .socials div:nth-child(4){
+    padding-left: 0.5rem;
+    padding-top: 0.5rem;
+}
+
+.socials div:nth-child(1){
+    padding-top: 0.5rem;
+}
+
+.footerStart li:first-child{
+   padding-bottom: 1rem;
+   padding-top: 1rem;
+   color:#555555;
+}
+
+.footerStart li:nth-child(2), .footerStart li:nth-child(3), .footerStart li:nth-child(4){
+    padding-bottom: 0.4rem;
+}
+
+.footerFirst{
+    font-size: 20px;
+    color: #555555;
+    font-weight: lighter;
 }
 
 .footerEnd{
     display: grid;
     grid-template-columns: repeat(2, 1fr);
     grid-template-rows: repeat(2, 1fr);
+    font-size: 16px;
+    padding-top: 1rem;
+}
+
+.footerEnd li:nth-child(2), .footerEnd li:nth-child(3), .footerEnd li:nth-child(4){
+    font-weight: lighter;
 }
 
 .footerEnd a{
     color:#555555;
 }
 
-.copyright{
-    color:#999999;
+.footerCopyright{
+    padding-bottom: 2rem;
 }
 
-@media screen and (min-width: 1200px){
+.copyright{
+    color:#999999;
+    font-weight: lighter;
+    font-size: 15px;
+}
+
+@media screen and (min-width: 1100px){
+    html{
+        width: 100%;
+    }
+
     .navigatioBar{
+        display: flex;
         justify-content: space-between;
+        padding-left: 2rem;
+        padding-right: 2rem;
+        padding-top: 1rem;
     }
 
     .nav a{
         margin: 10px;
     }
 
-    .nav a:hover{
-        color: #FF3998; 
+    .menu{
+        flex-direction: row;
+    }
+
+    .imagePink{
+        top: 10%;
     }
 
     .blockElement{
         display: block;
+        display: flex;
+        font-weight: lighter;
+    }
+
+    .firstContainer, .secondContainer{
+        padding-top: 5rem;
+        display: flex;
+        justify-content: space-between;
+        padding-left: 2rem;
+        padding-right: 2rem;
+    }
+
+    .firstConainerbox1{
+        width: 50%;
+    }
+
+    .firstContainer img{
+        transform: scale(1, 1);
+        left: 50%;
+        bottom: 10%;
+    }
+
+    .gradient{
+        background: none;
+    }
+
+    .relative{
+        width: 90%;
+        position: relative;
+        padding: 2rem;
+    }
+
+    .absolute1{
+        padding: 0.5rem;
+        right:50%;
+    }
+    .absolute2{
+        right:45.5%;
+        padding: 2rem;
+    }
+    
+    .relative img{
+        border-radius: 2rem;
     }
 
     .companyIcons{
         display: flex;
+        justify-content: center;
+        gap: 2rem;
+    }
+    .companyIcons img{
+        width: 100%;
     }
 
+    .iconSize{
+        width: 100%;
+    }
+
+    .nftText{
+        padding-left: 2rem;
+    }
+
+    .nftIcons{
+        width: 100%;
+        overflow-x: unset;
+        padding-left: 2rem;
+    }
+    
+    .secondContainer{
+        justify-content: space-between;
+        border-bottom: solid 2px #EEEEEE;
+        border-top: solid 2px #EEEEEE;
+    }
+
+    .secondConainerbox1{
+        width: 50%;
+    }
+    
     .footerCopyright{
         display: flex;
         justify-content: space-between;
@@ -171,15 +431,26 @@ nav a{
 
     .footerEnd{
         display: flex;
+        justify-content: space-evenly;
+        padding-left: 2rem;
+    }
+
+    .copyright{
+        padding-left: 1rem;
+        padding-right: 2rem;
+        padding-top: 3rem;
+    }
+
+    .footerFirst{
+        padding-left: 1rem;
     }
 
     .footerStart{
         display: grid;
         grid-template-columns: 1fr 1fr 2fr;
         grid-template-rows: 4fr, 1fr;
-
-    
     }
+
     .footerCopyright{
         grid-column: 1/4;
         grid-row: 2;
@@ -190,8 +461,11 @@ nav a{
     .footerEndfirst{
         grid-column: 3/4;
         grid-row: 1;
-        
+        text-align: left;
+       
     }
-    
 
+    .footerEnd{
+        padding-right: 3rem;
+    }
 }
